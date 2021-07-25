@@ -2,6 +2,7 @@ import { createClient } from 'contentful';
 import RecipeCard from '../components/RecipeCard';
 
 export async function getStaticProps() {
+  //https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/links/retrieval-of-linked-items/query-entries/console/js
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESSS_KEY,
@@ -12,6 +13,7 @@ export async function getStaticProps() {
   return {
     props: {
       recipes: res.items,
+      revalidate: 1,
     },
   };
 }
