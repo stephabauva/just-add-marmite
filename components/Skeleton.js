@@ -1,7 +1,9 @@
 export default function Skeleton() {
   return (
     <div className="skeleton">
-      <div className="s-banner"></div>
+      <div className="s-banner">
+        <h3>This page will be ready in a minute 😺</h3>
+      </div>
       <div className="s-header"></div>
       <div className="s-content"></div>
       <div className="s-content"></div>
